@@ -580,38 +580,21 @@
             <div class="eight columns">
 
                <!-- form -->
-               <form action="MAILTO:asaha@berkeley.edu" method="post" id="contactForm" name="contactForm">
-					<fieldset>
-
-                  <div>
-						   <label for="contactName">Name <span class="required">*</span></label>
-						   <input type="text" value="" size="25" id="contactName" name="contactName">
-                  </div>
-
-                  <div>
-						   <label for="contactEmail">Email <span class="required">*</span></label>
-						   <input type="text" value="" size="25" id="contactEmail" name="contactEmail">
-                  </div>
-
-                  <div>
-						   <label for="contactSubject">Subject</label>
-						   <input type="text" value="" size="25" id="contactSubject" name="contactSubject">
-                  </div>
-
-                  <div>
-                     <label for="contactMessage">Message <span class="required">*</span></label>
-                     <textarea cols="50" rows="5" id="contactMessage" name="contactMessage"></textarea>
-                  </div>
-
-                  <div>
-                     <button class="submit">Submit</button>
-                     <span id="image-loader">
-                        <img alt="" src="images/loader.gif">
-                     </span>
-                  </div>
-
-					</fieldset>
-				   </form> <!-- Form End -->
+	<form action="MAILTO:asaha@berkeley.edu!" id="contact-form" name="contact-form" role="form" method="post" enctype="text/plain">
+						<div class="container-fluid" id="form-contact-info">
+							<div class="row">
+								<div class="col-md-6">
+									<input id="name" name="Name" placeholder="name" type="text" required>
+								</div>
+								<div class="col-md-6">
+									<input id="email" name="Email" placeholder="email" type="email" required>
+								</div>
+							</div>
+						</div>
+						<textarea cols="35" id="message" name="Message" placeholder="message" rows="10" required></textarea>
+						<input type="submit" value="send it over!">
+					</form>
+               
 
                <!-- contact-warning -->
                <div id="message-warning"> Error: Your message was not sent.</div>
