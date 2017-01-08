@@ -104,13 +104,13 @@
 
                   <h2>Contact Details</h2>
                   <p class="address">
-						   <span>Anish Saha</span><br>
-						   <span>2314 Ellsworth Street<br>
-						         Berkeley, CA 94704 US
-                     </span><br>
-						   <span>(408) 806-8843</span><br>
-                     <span>asaha@berkeley.edu</span>
-					   </p>
+			<span>Anish Saha</span><br>
+			<span>2314 Ellsworth Street<br>
+			Berkeley, CA 94704
+                     	</span><br>
+			<span>(408) 806-8843</span><br>
+                     	<span>asaha@berkeley.edu</span>
+		  </p>
 
                </div>
 
@@ -406,13 +406,15 @@
 			<div class="container-fluid" id="form-contact-info">
 				<div class="row">
 					<label for="contactName">Name <span class="required">*</span></label>
-					<input type="text" value="" size="25" id="contactName" name="Name">
+					<input type="text" value="" size="25" id="contactName" name="Name"
+					       autofocus required pattern="^[a-zA-Z ][a-zA-Z0-9-_\. ]{1,20}$" required>
 				
 					<label for="contactEmail">Email <span class="required">*</span></label>
-					<input type="text" value="" size="25" id="contactEmail" name="Email">
+					<input type="email" value="" size="25" id="contactEmail" name="Email" required>
 					
 					<label for="contactMessage">Message <span class="required">*</span></label>
-                     			<textarea cols="50" rows="5" id="contactMessage" name="Message"></textarea>
+                     			<textarea cols="50" rows="5" id="contactMessage" name="Message"
+						  minlength="5" maxlength="1000" required></textarea>
 					
 		     			<label for="SUBMIT"> </label>
 					<input type="submit" value="Submit">
@@ -438,7 +440,7 @@
 					   <p class="address">
 						   Anish Saha<br>
 						   2314 Ellsworth Street <br>
-						   Berkeley, CA 94074 US<br>
+						   Berkeley, CA 94074<br>
 						   <span>(408) 806-8843</span>
 					   </p>
 
