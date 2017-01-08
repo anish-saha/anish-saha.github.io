@@ -406,13 +406,14 @@
 			<div class="container-fluid" id="form-contact-info">
 				<div class="row">
 					<div class="col-md-6">
-						<input id="name" name="Name" placeholder="Name" type="text" required>
-					</div>
+						<label for="contactName">Name <span class="required">*</span></label>
+						<input type="text" value="" size="25" id="contactName" name="contactName">					</div>
 					<div class="col-md-6">
-						<input id="email" name="Email" placeholder="Email" type="email" required>
+						 <label for="contactEmail">Email <span class="required">*</span></label>
+						 <input type="text" value="" size="25" id="contactEmail" name="contactEmail">
 					</div>
 					<textarea cols="50" id="message" name="Message" placeholder="Message" rows="10" required></textarea>
-					<input type="submit" value="Submit!">
+					<input type="submit" value="Submit">
 				</div>
 			</div>
 		</form>
