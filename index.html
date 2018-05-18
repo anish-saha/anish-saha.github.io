@@ -8,8 +8,8 @@
    ================================================== -->
    <meta charset="utf-8">
    <title>Anish Saha</title>
-   <meta name="description" content="">
-   <meta name="author" content="">
+   <meta name="description" content="main-page">
+   <meta name="author" content="anish-saha">
    <div ui-view="header" autoscroll="true"></div>
 
    <!-- Mobile Specific Metas
@@ -100,25 +100,23 @@
             <div class="row">
 
                <div class="columns contact-details">
+                  <h2>Contact Details</h2>
+                  <p class="address">
+                     <span>Anish Saha</span><br>
+                     <span>2520 Hillegass Avenue<br>
+                     Berkeley, CA 94704
+                     </span><br>
+                     <span>(408) 806-8843</span><br>
+                     <span>asaha@berkeley.edu</span>
+                  </p>
+               </div>
 
-            <h2>Contact Details</h2>
-            <p class="address">
-               <span>Anish Saha</span><br>
-               <span>2520 Hillegass Avenue<br>
-               Berkeley, CA 94704
-               </span><br>
-               <span>(408) 806-8843</span><br>
-               <span>asaha@berkeley.edu</span>
-           </p>
-
-         </div>
-
-         <div class="columns download">
-            <p>
-               <a href="inc/RESUME.pdf" class="button" download="AnishSahaResume">
-               <i class="fa fa-download"></i>Download Resume</a>
-            </p>
-         </div>
+               <div class="columns download">
+                  <p>
+                     <a href="inc/RESUME.pdf" class="button" download="AnishSahaResume">
+                     <i class="fa fa-download"></i>Download Resume</a>
+                  </p>
+               </div>
 
             </div> <!-- end row -->
 
@@ -575,6 +573,47 @@
                   <p class="address">
                      Since you made it this far :)
                   </p>
+
+                  <script type="text/javascript">
+                    var images = [
+                        "http://i1.kym-cdn.com/photos/images/original/001/015/724/10d.jpg", 
+                        "https://img.ifcdn.com/images/e023501fbc9f4f78d9325e9be9693efdd60d4752b06f393349773400396a7b64_1.jpg",
+                        "https://img.ifcdn.com/images/dfcc0ca6d3721393fdd108a0e6f3a39d835397c47a45d81d33da9a8cf857c1a1_1.jpg", 
+                        "https://img.ifcdn.com/images/d35db4674292004cecc1039dd6cf799677646b069f25ea7376cd53b5c6a7cc94_1.jpg", 
+                        "https://img.ifcdn.com/images/0377ef28af559dfc88050aa42dfa4559e084caf3d9a20e4cedea672f5e1a6100_1.jpg",
+                        "https://img.ifcdn.com/images/7005058f1c821e697b3ad015b370e2d5e012e7e17cb6e789a7633dc67702b7d9_1.jpg",
+                        "https://thechive.files.wordpress.com/2016/07/5cac62b3c3b07cc981cc080d1364adc0.jpg",
+                        "https://s-media-cache-ak0.pinimg.com/736x/85/d0/b8/85d0b8e8adce58168df0b4c313e644bc.jpg",
+                        "http://b-i.forbesimg.com/cherylsnappconner/files/2013/07/Disapproval-248x300.png",
+                        "https://thechive.files.wordpress.com/2016/11/dank-memes-that-will-make-you-slightly-exhale-while-staring-at-your-screen-35-photos-235.jpg",
+                        "http://ww4.hdnux.com/photos/45/70/31/9930343/3/920x920.jpg",
+                        "https://s-media-cache-ak0.pinimg.com/736x/ec/c9/fd/ecc9fda4f9abd2fb79ec69f15eef974f.jpg",
+                        "http://i1.kym-cdn.com/photos/images/newsfeed/001/112/704/8a8.jpg",
+                        "https://68.media.tumblr.com/edb917eaaa7846f1e24aadce43b0fc14/tumblr_nqf2n549HN1uycsrro1_1280.jpg",
+                        "https://s-media-cache-ak0.pinimg.com/564x/a6/7b/05/a67b059e2e13d6ba3187ce9b7e08abe7.jpg",
+                        "https://s-media-cache-ak0.pinimg.com/564x/a6/7b/05/a67b059e2e13d6ba3187ce9b7e08abe7.jpg",
+                        "http://cdn.smosh.com/sites/default/files/2016/06/caveman-spongebob-memes-pick-partner.jpg",
+                        "https://img.ifcdn.com/images/2b231a8b158f14aa15a7b4bd2fc01bb3b5e4fce299b01c3ade4fdb433c4a6fd8_1.jpg",
+                    ];
+                    function getImgTag() {
+                        var img = '<img src=\"';
+                        var i = randomImg();
+                        img += i;
+                        img += '\" alt=\"\" id=\"meme\" style=\"cursor: pointer; max-width:70%; max-height:70%;\" onclick=\"this.src=randomImg();\"/>';
+                        return img;
+                    };
+                    function randomImg() {
+                        i = Math.floor(Math.random() * images.length);
+                        img = images[i];
+                        return img;
+                    }
+
+                  </script>
+
+                  <script type="text/javascript">
+                     document.write(getImgTag());
+                  </script>
+
                </div>
 
 
