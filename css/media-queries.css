@@ -59,23 +59,6 @@
    #resume h1 { font: 16px/24px 'opensans-bold', sans-serif; }
    #resume .main-col { padding-right: 5%; }   
 
-   /* Testimonials Section
-   ------------------------------------------------------------------- */
-   #testimonials .header-col h1:before {
-      font-size: 66px;
-      line-height: 66px;
-   }
-   #testimonials blockquote p {
-      font-size: 22px;
-      line-height: 46px;      
-   }
-
-    /* Call to Action Section
-   ------------------------------------------------------------------- */
-   #call-to-action .header-col h1:before {
-      font-size: 66px;
-      line-height: 66px;
-   }
 
    /* Contact Section
    ------------------------------------------------------------------- */
@@ -233,30 +216,19 @@
    #resume h3, #resume .info { text-align: center; }
       
    .bars { width: 100%; }
+   .bars li em {
+      font: 10px 'opensans-bold', sans-serif;
+      letter-spacing: 1px;
+      top: -24px;
+   }
 
 
    /* Portfolio Section
    /* ----------------------------------------------------------------- */
-   #portfolio-wrapper .columns { margin-bottom: 40px; }
+   #portfolio h1 { width: 80%; text-align: center; margin-left: 36px}
+   #portfolio-wrapper .columns { margin-bottom: 40px; margin-left: 0px; }
    .popup-modal {	max-width: 85%; }
 
-
-   /* Testimonials Section
-   ----------------------------------------------------------------------- */
-   #testimonials .text-container { text-align: center; }
-   #testimonials h1 {
-      font: 16px/24px 'opensans-bold', sans-serif;
-      text-align: center;
-      margin-bottom: 30px;
-      text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
-   }
-   #testimonials h1 span { display: block; }
-   #testimonials .header-col h1:before { content: none; }
-   #testimonials blockquote { padding-bottom: 24px; }
-   #testimonials blockquote p {
-      font-size: 20px;
-      line-height: 42px;      
-   }
 
    /* Control Nav */
    .flex-control-nav {
@@ -275,7 +247,14 @@
       margin-bottom: 30px;
       text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
    }  
-   #contact h1 span { display: block; }
+   #contact h1 span { 
+      display: block; 
+      font: 25px 'opensans-bold', sans-serif;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #fff;
+   }
    #contact .header-col { padding-top: 0; }
    #contact .header-col h1:before { content: none;	}
    #contact .section-head p.lead { text-align: center;}
