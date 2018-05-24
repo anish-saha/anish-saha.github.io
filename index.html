@@ -592,14 +592,13 @@
                         "https://68.media.tumblr.com/edb917eaaa7846f1e24aadce43b0fc14/tumblr_nqf2n549HN1uycsrro1_1280.jpg",
                         "https://s-media-cache-ak0.pinimg.com/564x/a6/7b/05/a67b059e2e13d6ba3187ce9b7e08abe7.jpg",
                         "https://s-media-cache-ak0.pinimg.com/564x/a6/7b/05/a67b059e2e13d6ba3187ce9b7e08abe7.jpg",
-                        "http://cdn.smosh.com/sites/default/files/2016/06/caveman-spongebob-memes-pick-partner.jpg",
                         "https://img.ifcdn.com/images/2b231a8b158f14aa15a7b4bd2fc01bb3b5e4fce299b01c3ade4fdb433c4a6fd8_1.jpg",
                     ];
                     function getImgTag() {
                         var img = '<img src=\"';
                         var i = randomImg();
                         img += i;
-                        img += '\" alt=\"\" id=\"meme\" style=\"cursor: pointer; max-width:70%; max-height:70%;\" onclick=\"this.src=randomImg();\"/>';
+                        img += '\" alt=\"\" id=\"meme\" style=\"cursor: pointer; max-width:70%; max-height:70%;\" onclick=\"this.src=randomImg();\""/>';
                         return img;
                     };
                     function randomImg() {
