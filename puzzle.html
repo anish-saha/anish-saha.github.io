@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #passwordForm {
+            margin-top: 20px;
+        }
+        #password {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #content {
+            display: none;
+            overflow: auto;
+            height: auto;
+            display: block;
+            justify-content: flex-start;
+        }
+        #content {
+            width: 80%;              /* Set a fixed width for the content */
+            max-width: 800px;       /* Set a maximum width for better control */
+            margin: 0 auto;         /* Center the content */
+        }
+
+        #content p {
+            width: 100%;            /* Ensure the paragraph takes the full width of its parent */
+            overflow-wrap: break-word; /* Allows long words to break and wrap onto the next line */
+            white-space: normal;     /* Ensures that the text wraps normally */
+            line-height: 1.5;       /* Increase line height for better readability */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="passwordPrompt">
+            <h2>Enter Password</h2>
+            <div id="passwordForm">
+                <input type="password" id="password" placeholder="Enter password">
+                <button onclick="checkPassword()">Submit</button>
+            </div>
+        </div>
+        <div id="content"></div>
+    </div>
+
+    <script>
+        const shift = 1;
+        const encryptedPassword = 'psfp';
+        const encryptedMessage = '79858581844B3G3G8888883F74727F87723F747G7E3G75768' +
+                '47:787F3G55525879845752897879413G615:5F456553867F7B' +
+                '57675F487B59877F578B7488883G877:76884G86857E6G747G' +
+                '7F85767F854E55525879845752897879413786857E6G74727E' +
+                '81727:787F4E7576847:787F84797283763786857E6G7E76757' +
+                ':867E4E7D7:7F7C433786857E6G847G868374764E867F7:828' +
+                '6767D7:7F7C843786857D5:754E7946474372427248737472'
+
+
+        function encrypt(text) {
+            return text.split('').map(char => String.fromCharCode(char.charCodeAt(0) + shift)).join('');
+        }
+
+        function decrypt(text) {
+            return text.split('').map(char => String.fromCharCode(char.charCodeAt(0) - shift)).join('');
+        }
+
+        function checkPassword() {
+            const password = document.getElementById('password').value.trim();
+            const hashedInput = encrypt(password);
+
+            if (hashedInput === encryptedPassword) {
+                document.getElementById('passwordPrompt').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+                document.getElementById('content').innerHTML = `<p>${decrypt(encryptedMessage)}</p>`;
+            } else {
+                alert('Incorrect password. Try again!');
+                document.getElementById('password').value = '';
+            }
+        }
+
+        // Allow Enter key to submit
+        document.getElementById('password').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+    </script>
+</body>
+</html>
