@@ -103,12 +103,17 @@
         <div id="passwordPrompt">
             <h2>Enter Password</h2>
             <div id="passwordForm">
-                <input type="password" id="password" placeholder="Enter password">
-                <button onclick="checkPassword()">Submit</button>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter password" aria-label="Enter password">
+                <button type="submit" id="submitButton" aria-label="Submit password">Submit</button>
             </div>
         </div>
-        <div id="content"></div>
+        <div id="content" aria-live="polite"></div>
     </div>
+
+    <noscript>
+        <p>This page requires JavaScript to function properly. Please enable JavaScript in your browser.</p>
+    </noscript>
 
     <script>
         const shift = 1;
@@ -119,8 +124,7 @@
                 '7F85767F854E55525879845752897879413786857E6G74727E' +
                 '81727:787F4E7576847:787F84797283763786857E6G7E76757' +
                 ':867E4E7D7:7F7C433786857E6G847G868374764E867F7:828' +
-                '6767D7:7F7C843786857D5:754E7946474372427248737472'
-
+                '6767D7:7F7C843786857D5:754E7946474372427248737472';
 
         function encrypt(text) {
             return text.split('').map(char => String.fromCharCode(char.charCodeAt(0) + shift)).join('');
@@ -144,7 +148,8 @@
             }
         }
 
-        // Allow Enter key to submit
+        // Add event listeners
+        document.getElementById('submitButton').addEventListener('click', checkPassword);
         document.getElementById('password').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 checkPassword();

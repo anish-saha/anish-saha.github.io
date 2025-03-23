@@ -1,0 +1,55 @@
+/* Education Section */
+.education-details {
+    font: 18px 'opensans-semibold',sans-serif;
+}
+
+/* Work Experience Section */
+.linkedin-link {
+    font-size: 0.7em;
+    line-height: 1.25;
+    padding-top: 17px;
+}
+
+.experience-intro {
+    font: 18px 'opensans-regular',sans-serif;
+    padding-top: 8px;
+    padding-bottom: 18px;
+    color: #000;
+    margin: 0 0 10px 0;
+}
+
+.experience-item {
+    font: 16px 'opensans-regular',sans-serif;
+    padding-left: 12px;
+    margin: 0 0 10px 0;
+}
+
+.company {
+    font: 16px 'opensans-semibold',sans-serif;
+    color: #2B2B2B;
+}
+
+/* Portfolio Section */
+.see-more-projects {
+    font: 14px 'opensans-regular',sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact-intro {
+    font: 18px 'opensans-regular',sans-serif;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    color: #fff;
+    line-height: 1.8;
+}
+
+/* Random Photo Generator */
+.random-photo-generator {
+    padding-top: 18px;
+}
+
+.random-photo-intro {
+    font-family: 'opensans-regular',sans-serif;
+}
