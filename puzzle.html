@@ -125,6 +125,7 @@
                 '81727:787F4E7576847:787F84797283763786857E6G7E76757' +
                 ':867E4E7D7:7F7C433786857E6G847G868374764E867F7:828' +
                 '6767D7:7F7C843786857D5:754E7946474372427248737472';
+        const magicIndices = [11, 16180, 31415, 11];
 
         function encrypt(text) {
             return text.split('').map(char => String.fromCharCode(char.charCodeAt(0) + shift)).join('');
@@ -142,10 +143,26 @@
                 document.getElementById('passwordPrompt').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
                 document.getElementById('content').innerHTML = `<p>${decrypt(encryptedMessage)}</p>`;
+            } else if (password === 'bear') {
+                alert('You\'re getting closer... but not quite there.');
+                document.getElementById('password').value = '';
+                console.log("Hint:", "The answers you seek may be right in front of you.");
             } else {
                 alert('Incorrect password. Try again!');
                 document.getElementById('password').value = '';
+                console.log("Hint:", getRandomHint());
             }
+        }
+
+        function getRandomHint() {
+            const hints = [
+                "The password consists of 4 alphanumeric characters.",
+                "All characters are lowercase English alphabet letters.",
+                "The key might be hiding in plain sight... or in another puzzle.",
+                "The magic indices are: " + magicIndices.join(', ') + ". What could they mean?",
+                "Corners are cool. Perhaps they may provide further insight."
+            ];
+            return hints[Math.floor(Math.random() * hints.length)];
         }
 
         // Add event listeners
